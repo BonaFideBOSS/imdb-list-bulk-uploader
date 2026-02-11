@@ -20,12 +20,12 @@ A Tampermonkey userscript that adds a bulk upload panel to any IMDb list edit pa
 1. Install the [Tampermonkey](https://www.tampermonkey.net/) browser extension
 2. Click the link below to install the script:
 
-   **[Install IMDb List Bulk Uploader](../../raw/main/imdb-bulk-uploader.user.js)**
+   **[Install IMDb List Bulk Uploader](../../raw/refs/heads/main/imdb-bulk-uploader.user.js)**
 
    _Or manually: open Tampermonkey dashboard → `+` (Create new script) → paste the contents of `imdb-bulk-uploader.user.js` → Save._
 
-3. Go to any IMDb list edit page (e.g. `https://www.imdb.com/list/ls123456789/edit/`)
-4. The **Bulk Upload** card will appear above the "Add a title to this list" section
+4. Go to any IMDb list edit page (e.g. `https://www.imdb.com/list/ls123456789/edit/`)
+5. The **Bulk Upload** card will appear above the "Add a title to this list" section
 
 > **Note:** You must be logged in to IMDb for the script to work. It uses your browser's existing session cookies to authenticate API requests.
 
