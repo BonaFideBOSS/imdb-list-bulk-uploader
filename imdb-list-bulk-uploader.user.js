@@ -20,6 +20,9 @@
   const GRAPHQL_ENDPOINT = "https://api.graphql.imdb.com/";
 
   const DELAY_OPTIONS = [
+    { label: "1 s", value: 1000 },
+    { label: "2 s", value: 2000 },
+    { label: "3 s", value: 3000 },
     { label: "5 s", value: 5000 },
     { label: "10 s", value: 10000 },
     { label: "15 s", value: 15000 },
@@ -560,6 +563,10 @@
           ? `Upload cancelled. ${succeeded} added, ${failed} failed.`
           : `Upload complete! ${succeeded} added, ${failed} failed.`;
         showLog(logList, msg, aborted ? "warn" : "info");
+
+        if (succeeded > 0) {
+          showRefreshButton(logList);
+        }
       } catch (err) {
         showLog(logList, `Unexpected error: ${err.message}`, "error");
       }
@@ -627,6 +634,19 @@
     ]);
 
     container.appendChild(line);
+    container.scrollTop = container.scrollHeight;
+  }
+
+  /** Append a "Refresh page" button to the log after a successful upload. */
+  function showRefreshButton(container) {
+    const wrapper = el("div", { className: "bu-refresh-row" }, [
+      el("button", {
+        textContent: "Refresh page to see changes",
+        className: "bu-btn bu-btn-refresh",
+        onclick: () => location.reload(),
+      }),
+    ]);
+    container.appendChild(wrapper);
     container.scrollTop = container.scrollHeight;
   }
 
@@ -821,6 +841,19 @@
         color: rgba(0,0,0,0.6);
       }
       .bu-btn-cancel:hover { background: rgba(0,0,0,0.14); }
+      .bu-refresh-row { margin-top: 10px; }
+      .bu-btn-refresh {
+        padding: 6px 18px;
+        border: none;
+        border-radius: 4px;
+        font-size: 13px;
+        font-weight: 600;
+        cursor: pointer;
+        background: #f5c518;
+        color: #000;
+        transition: background 0.15s;
+      }
+      .bu-btn-refresh:hover { background: #e0b400; }
       .bu-hidden { display: none !important; }
 
       /* Progress */
