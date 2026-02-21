@@ -29,7 +29,14 @@ https://github.com/user-attachments/assets/dab493f7-721e-466d-8486-cf6902eeed40
 4. Go to any IMDb list edit page (e.g. `https://www.imdb.com/list/ls123456789/edit/`)
 5. The **Bulk Upload** card will appear above the "Add a title to this list" section
 
-> **Note:** You must be logged in to IMDb for the script to work. It uses your browser's existing session cookies to authenticate API requests.
+> [!IMPORTANT]
+> You must enable user scripts from Tampermonkey extension settings
+>
+> <img width="719" height="108" alt="image" src="https://github.com/user-attachments/assets/34a474d1-6d28-4663-9389-0143881caae4" />
+
+> [!NOTE]
+> You must be logged in to IMDb for the script to work. It uses your browser's existing session cookies to authenticate API requests.
+
 
 ## Usage
 
