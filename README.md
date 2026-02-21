@@ -4,6 +4,8 @@ A Tampermonkey userscript that adds a bulk upload panel to any IMDb list edit pa
 
 ![IMDb List Bulk Uploader](https://img.shields.io/badge/IMDb-Bulk_Uploader-f5c518?style=for-the-badge&logo=imdb&logoColor=000)
 
+https://github.com/user-attachments/assets/dab493f7-721e-466d-8486-cf6902eeed40
+
 ## Features
 
 - **Two input modes** — paste data directly or upload a `.csv` / `.txt` file
